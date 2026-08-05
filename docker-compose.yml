@@ -1,0 +1,17 @@
+services:
+  html-host:
+    build: .
+    container_name: html-host-panel
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # 首次注册口令:注册第一个通行密钥时必须输入,防止别人抢先注册。务必修改!
+      - SETUP_TOKEN=please-change-me
+      # 生产环境建议固定为你的实际域名(不设则从请求头自动探测):
+      # - RP_ID=html.example.com
+      # - ORIGIN=https://html.example.com
+      - RP_NAME=HTML 托管面板
+    volumes:
+      - ./uploads:/app/uploads
+      - ./data:/app/data

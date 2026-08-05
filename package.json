@@ -1,0 +1,14 @@
+{
+  "name": "html-host-panel",
+  "version": "1.0.0",
+  "description": "HTML 托管面板:上传 Agent 生成的 HTML,浏览器直接打开",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "^10.0.0",
+    "express": "^4.19.2",
+    "multer": "^2.0.0"
+  }
+}
